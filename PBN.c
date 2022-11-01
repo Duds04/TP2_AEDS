@@ -3,27 +3,21 @@
 int manipulaArquivo(PBN *pPBN, char *pTexto)
 {
     FILE *arquivo;
-    int contLinha = 1;
     char c;
     int valor = -10;
     int i = 0;
-    int j = 0;
 
     if ((arquivo = fopen(pTexto, "r")) != NULL)
     {
         
         while (fscanf(arquivo, "%d%c", &valor, &c) != EOF)
         {
-            // printf("\nLetra: -> %c-", c);
-            // printf("\nDigito: %d\n", valor);
-
             if(valor != i){
                 pPBN->matriz[i][valor] = 1;
             }
 
             if (c == '\n')
             {
-                // printf("Entrou aqui em\n");
                 i++;
             }
         }
@@ -32,6 +26,7 @@ int manipulaArquivo(PBN *pPBN, char *pTexto)
         return 0;
     }
 
+    fclose(arquivo);
     return 1;
 }
 
@@ -46,11 +41,8 @@ int inicializaMatriz(PBN *pPBN){
                 pPBN->matriz[i][j] = 0;
 
             }
-            // printf("%d ", pPBN->matriz[i][j]);
         }
-        // printf("\n");
     }
-
     return 1;
 }
 
@@ -69,3 +61,4 @@ int imprimiMatriz(PBN *pPBN){
     }
     return 1;
 }
+
