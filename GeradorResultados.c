@@ -1,4 +1,4 @@
-#include "Functions.h"
+#include "./headers/GeradorResultados.h"
 
 
 void CombinationRepetitionUtil(int chosen[], int arr[], int index, int r, int start, int end)

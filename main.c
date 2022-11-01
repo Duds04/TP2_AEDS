@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <stdio_ext.h>
 #include <string.h>
-#include "PBN.h"
-
+#include "./headers/PBN.h"
 
 int main(){
     printf("\nRodando o programa...\n\n");

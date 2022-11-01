@@ -3,6 +3,7 @@
         "pbn.h": "c",
         "stdio.h": "c",
         "string.h": "c",
-        "stdio_ext.h": "c"
+        "stdio_ext.h": "c",
+        "functions.h": "c"
     }
 }

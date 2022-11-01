@@ -1,4 +1,4 @@
-#include "PBN.h"
+#include "./headers/PBN.h"
 
 int manipulaArquivo(PBN *pPBN, char *pTexto)
 {
@@ -69,5 +69,3 @@ int imprimiMatriz(PBN *pPBN){
     }
     return 1;
 }
-
-//git commit -m "Arrumando arquivos de entradas (finalizado a leitura e tratamento da matriz"
