@@ -4,22 +4,25 @@
 #include <string.h>
 #include "PBN.h"
 
+
 int main(){
+    printf("\nRodando o programa...\n\n");
     PBN pbn;
 
-    int tamanho;
     char arquivo[30];
     char caminho[20] = "./entradas/";
-    printf("\nDigite o tamanho da matriz:\n");
-    scanf("%d", &tamanho);
+    inicializaMatriz(&pbn);
+
+
     // printf("\nDigite o nome do arquivo (com sua extensao .txt): \n");
     // scanf(" %s", arquivo);
-    strcpy(arquivo, "ent1.txt");
+    strcpy(arquivo, "entrada_II.txt");
     strcat(caminho, arquivo);
-    
-    printf("%s\n", caminho);
-    manipulaArquivo(&pbn, caminho, tamanho);
+    // printf("\n%s\n", caminho);
 
 
-//entrada_I.txt
+    manipulaArquivo(&pbn, caminho);
+    imprimiMatriz(&pbn);
+
+    // printf("Imprimindo...\n");
 }

@@ -1,6 +1,6 @@
 #include "PBN.h"
 
-int manipulaArquivo(PBN *pPBN, char *pTexto, int tamanho)
+int manipulaArquivo(PBN *pPBN, char *pTexto)
 {
     FILE *arquivo;
     int contLinha = 1;
@@ -8,57 +8,66 @@ int manipulaArquivo(PBN *pPBN, char *pTexto, int tamanho)
     int valor = -10;
     int i = 0;
     int j = 0;
-    int arvore[tamanho][tamanho];
 
-// printf("Entrou\n");
-
-    for (int i = 0; i < tamanho; i++)
-    {
-        for (int j = 0; j < tamanho; j++)
-        {
-            if(i == j){
-                arvore[i][j] = -1;
-            }else{
-                arvore[i][j] = 0;
-
-            }
-            printf("%d ", arvore[i][j]);
-        }
-        printf("\n");
-    }
-    
-
-
-    // printf("Entrou\n");
     if ((arquivo = fopen(pTexto, "r")) != NULL)
     {
         
-        // printf("Entrou 2\n");
         while (fscanf(arquivo, "%d%c", &valor, &c) != EOF)
         {
-            // printf("\nLetra: ->%c- \nDigito: %d\n", c, valor);
+            // printf("\nLetra: -> %c-", c);
+            // printf("\nDigito: %d\n", valor);
 
             if(valor != i){
-                arvore[i][valor] = 1;
+                pPBN->matriz[i][valor] = 1;
             }
 
             if (c == '\n')
             {
+                // printf("Entrou aqui em\n");
                 i++;
             }
         }
     }else{
         printf("Erro ao abrir o arquivo\n");
+        return 0;
     }
 
+    return 1;
+}
 
-    printf("\n%d\n", i);
-     for (int i = 0; i < tamanho; i++)
+int inicializaMatriz(PBN *pPBN){
+    for (int i = 0; i < tamanho; i++)
     {
         for (int j = 0; j < tamanho; j++)
         {
-            printf("%d ", arvore[i][j]);
+            if(i == j){
+                pPBN->matriz[i][j] = -1;
+            }else{
+                pPBN->matriz[i][j] = 0;
+
+            }
+            // printf("%d ", pPBN->matriz[i][j]);
+        }
+        // printf("\n");
+    }
+
+    return 1;
+}
+
+int comparaArranjos(PBN *pPBN){
+    return 1; // execultou sem erros
+}
+
+int imprimiMatriz(PBN *pPBN){
+    for (int i = 0; i < tamanho; i++)
+    {
+        for (int j = 0; j < tamanho; j++)
+        {
+            printf("%d ", pPBN->matriz[i][j]);
         }
         printf("\n");
     }
+    return 1;
 }
+
+//git commit -m "Arrumando arquivos de entradas (finalizado a leitura e tratamento da matriz"
