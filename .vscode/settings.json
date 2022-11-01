@@ -4,6 +4,7 @@
         "stdio.h": "c",
         "string.h": "c",
         "stdio_ext.h": "c",
-        "functions.h": "c"
+        "functions.h": "c",
+        "geradorresultados.h": "c"
     }
 }

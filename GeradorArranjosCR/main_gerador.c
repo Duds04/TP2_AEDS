@@ -1,4 +1,4 @@
-#include "Functions.h"
+#include "./headers/GeradorResultados.h"
 
 int main(int argc, char *argv[])
 {
