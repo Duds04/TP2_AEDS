@@ -1,4 +1,4 @@
-#include "Functions.h"
+#include "headers/GeradorResultados.h"
 
 char *vetor[] = {"0",  "1", NULL} ;
 
