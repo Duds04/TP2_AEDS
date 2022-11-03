@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdio_ext.h>
+//#include <stdio_ext.h>
 #include <string.h>
 #include "./headers/PBN.h"
+#include "./headers/GeradorResultados.h"
 
 int main(){
     printf("\nRodando o programa...\n\n");
@@ -15,7 +16,7 @@ int main(){
 
     // printf("\nDigite o nome do arquivo (com sua extensao .txt): \n");
     // scanf(" %s", arquivo);
-    strcpy(arquivo, "entrada_II.txt");
+    strcpy(arquivo, "entrada_I.txt");
     strcat(caminho, arquivo);
     // printf("\n%s\n", caminho);
 
@@ -23,5 +24,7 @@ int main(){
     manipulaArquivo(&pbn, caminho);
     imprimiMatriz(&pbn);
 
+    printf("\n");
+    Arranjos(10, &pbn);
     // printf("Imprimindo...\n");
 }
