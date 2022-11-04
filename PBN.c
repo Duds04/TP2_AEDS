@@ -91,6 +91,7 @@ int Arranjos(PBN* pPBN){
                     if (pPBN->matriz[atual][j] == 1)
                         if (num[atual] == num[j]){
                             Erro = 1;
+                            break;
                         }
                     
                 }
