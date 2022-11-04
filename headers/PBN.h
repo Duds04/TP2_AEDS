@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+
 
 // o tamanho vai ser definido pelo proprio desenvolvedor com base no arquivo teste que ira ser testado
 #define tamanho 40 
@@ -13,4 +15,5 @@ typedef struct
 int inicializaMatriz(PBN *pPBN);
 int manipulaArquivo(PBN *pPBN, char *pTexto);
 int comparaArranjos(PBN *pPBN);
-int imprimiMatriz(PBN *pPBN);
+int imprimiMatriz(PBN *pPBN, int tam);
+int Arranjos(int espacos, PBN* pPBN);
