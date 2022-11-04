@@ -92,7 +92,7 @@ int Arranjos(int espacos, PBN* pPBN){
             for (atual=0; atual < r; atual++)
                 for(j=0; j < r; j++) {
                     if (pPBN->matriz[atual][j] == 1)
-                        if (num[atual] == num[j] && i != j){
+                        if (num[atual] == num[j]){
                             Erro = 1;
                         }
                     
@@ -102,7 +102,7 @@ int Arranjos(int espacos, PBN* pPBN){
                     printf("%d- Invalida ", cont);
 
                 else
-                    printf("%d- Obigado, ncontramos a saida valida: ", cont);
+                    printf("%d- Obigado, encontramos a saida valida: ", cont);
 
                 cont++;
                 for(j=0; j < r; j++)
@@ -114,6 +114,8 @@ int Arranjos(int espacos, PBN* pPBN){
                 /* incrementa o algarismo menos
                 * significativo. */
                 num[0]++ ;
+                if (!Erro)
+                    exit(1);
                 
         }
         
