@@ -14,19 +14,17 @@ int main(){
     inicializaMatriz(&pbn);
 
 
-    printf("\nDigite o nome do arquivo (com sua extensao .txt): \n");
+    /* printf("\nDigite o nome do arquivo (com sua extensao .txt): \n");
     scanf(" %s", arquivo);
-    // strcpy(arquivo, "ent2.txt");
+    strcat(caminho, arquivo);*/
+
+    strcpy(arquivo, "entrada_I.txt");
     strcat(caminho, arquivo);
-    // printf("\n%s\n", caminho);
-    
-    int tam;
-    printf("qual o tamanho da matriz: ");
-    scanf("%d", &tam);
+    printf("\n%s\n", caminho);
 
     manipulaArquivo(&pbn, caminho);
-    imprimiMatriz(&pbn, tam);
+    imprimiMatriz(&pbn);
 
     printf("Imprimindo...\n");
-    Arranjos(tam, &pbn);
+    Arranjos(&pbn);
 }

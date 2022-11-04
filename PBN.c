@@ -46,14 +46,10 @@ int inicializaMatriz(PBN *pPBN){
     return 1;
 }
 
-int comparaArranjos(PBN *pPBN){
-    return 1; // execultou sem erros
-}
-
-int imprimiMatriz(PBN *pPBN, int tam){
-    for (int i = 0; i < tam; i++)
+int imprimiMatriz(PBN *pPBN){
+    for (int i = 0; i < tamanho; i++)
     {
-        for (int j = 0; j < tam; j++)
+        for (int j = 0; j < tamanho; j++)
         {
             printf("%d ", pPBN->matriz[i][j]);
         }
@@ -64,13 +60,14 @@ int imprimiMatriz(PBN *pPBN, int tam){
 
 char *vetor[] = {"0",  "1", NULL} ;
 
-int Arranjos(int espacos, PBN* pPBN){
+// cria arranjos e compara eles
+int Arranjos(PBN* pPBN){
     /* vetor de cada permutacao. */
     int *num ;
     /* quantidade de elementos do vetor. */
     int n=2 ;
     /* tamanho de cada permutacao. */
-    int r = espacos;
+    int r = tamanho;
     /* controle de loop. */
     int i, j, Erro, atual;
     

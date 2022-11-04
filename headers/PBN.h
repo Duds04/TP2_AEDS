@@ -4,7 +4,7 @@
 
 
 // o tamanho vai ser definido pelo proprio desenvolvedor com base no arquivo teste que ira ser testado
-#define tamanho 40 
+#define tamanho 10 
 
 
 typedef struct 
@@ -14,6 +14,5 @@ typedef struct
 
 int inicializaMatriz(PBN *pPBN);
 int manipulaArquivo(PBN *pPBN, char *pTexto);
-int comparaArranjos(PBN *pPBN);
-int imprimiMatriz(PBN *pPBN, int tam);
-int Arranjos(int espacos, PBN* pPBN);
+int imprimiMatriz(PBN *pPBN);
+int Arranjos(PBN* pPBN); // cria arranjos e compara eles
