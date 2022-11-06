@@ -11,7 +11,8 @@ int main(){
     char caminho[20] = "./entradas/";
     inicializaMatriz(&pbn);
 
-    strcpy(arquivo, "entrada_I.txt");
+    printf("\nDigite o nome do arquivo (com sua extensao .txt): \n");
+    scanf(" %s", arquivo);
     strcat(caminho, arquivo);
     printf("\n%s\n", caminho);
 

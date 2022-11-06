@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 
-// o tamanho vai ser definido pelo proprio desenvolvedor com base no arquivo teste que ira ser testado
+// o tamanho vai ser definido pelo proprio desenvolvedor com base no arquivo txt de entrada que ira ser testado
 #define tamanho 10 
 
 

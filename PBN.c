@@ -100,7 +100,7 @@ int Arranjos(PBN* pPBN){
                     printf("%d- Invalida ", cont);
 
                 else
-                    printf("%d- Obigado, encontramos a saida valida: ", cont);
+                    printf("%d- Encontramos a saida valida: ", cont);
 
                 cont++;
                 for(j=0; j < r; j++)
